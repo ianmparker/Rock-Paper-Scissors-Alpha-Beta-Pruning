@@ -1,5 +1,6 @@
 # Rock-Paper-Scissors-Alpha-Beta-Pruning
-This repo has two pyton files. 
+This repo has two pyton files:
+  - Human-vs-Ai-Rock-paper-Scissors
 
 Play an Ai in Rock Paper Scissors that uses Alpha-Beta Pruning decision making. 
 
