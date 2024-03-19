@@ -10,7 +10,7 @@ Ai-vs-Ai-Rock-Paper-Scissors simulated a game of Rock-Paper-Scissors bewteen a M
 
 Both of these examples use Minimaxing and Alpha beta Pruining to make decisions. 
 
-#-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 My LinkedIn : https://www.linkedin.com/in/ian-parker-596011142/
 
