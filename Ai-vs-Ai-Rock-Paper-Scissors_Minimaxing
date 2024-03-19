@@ -1,0 +1,66 @@
+import random  # Import the random module
+
+# Define the game rules for Rock, Paper, Scissors
+RULES = {
+    "rock": "scissors",  # Rock beats Scissors
+    "paper": "rock",  # Paper beats Rock
+    "scissors": "paper"  # Scissors beats Paper
+}
+
+# Function to evaluate the result of a move
+def evaluate_move(player1, player2):
+    if RULES[player1] == player2:
+        return 1  # Player 1 wins
+    elif RULES[player2] == player1:
+        return -1  # Player 2 wins
+    else:
+        return 0  # It's a tie
+
+# Function to implement the Alpha-Beta Pruning algorithm
+def alpha_beta_pruning(state, depth, alpha, beta, maximizing_player):
+    if depth == 0:
+        return evaluate_move(state[0], state[1])  # Evaluate the move if we've reached the maximum depth
+
+    if maximizing_player:  # If it's the maximizing player's turn
+        value = float("-inf")  # Initialize the value to negative infinity
+        for move1 in ["rock", "paper", "scissors"]:
+            for move2 in ["rock", "paper", "scissors"]:
+                value = max(value, alpha_beta_pruning((move1, move2), depth - 1, alpha, beta, False))  # Recursively call the function for the next depth
+                alpha = max(alpha, value)  # Update the alpha value
+                if alpha >= beta:  # If alpha is greater than or equal to beta, break the loop (Pruning)
+                    break
+        return value
+    else:  # If it's the minimizing player's turn
+        value = float("inf")  # Initialize the value to positive infinity
+        for move1 in ["rock", "paper", "scissors"]:
+            for move2 in ["rock", "paper", "scissors"]:
+                value = min(value, alpha_beta_pruning((move1, move2), depth - 1, alpha, beta, True))  # Recursively call the function for the next depth
+                beta = min(beta, value)  # Update the beta value
+                if alpha >= beta:  # If alpha is greater than or equal to beta, break the loop (Pruning)
+                    break
+        return value
+
+# Function for the AI to make a move
+def ai_move():
+    moves = ["rock", "paper", "scissors"]
+    return random.choice(moves)  # Choose a random move
+
+# Function to play the game
+def play_game():
+    depth = 3  # Set the search depth
+    player1_move = ai_move()  # Player 1 makes a move
+    player2_move = ai_move()  # Player 2 makes a move
+
+    result = alpha_beta_pruning((player1_move, player2_move), depth, float("-inf"), float("inf"), True)  # Call the Alpha-Beta Pruning function
+
+    # Print the result of the game
+    if result == 1:
+        print(f"Player 1 ({player1_move}) wins against Player 2 ({player2_move})!")
+    elif result == -1:
+        print(f"Player 2 ({player2_move}) wins against Player 1 ({player1_move})!")
+    else:
+        print(f"It's a tie! Both players chose {player1_move}.")
+
+# If this script is run directly, play the game
+if __name__ == "__main__":
+    play_game()
