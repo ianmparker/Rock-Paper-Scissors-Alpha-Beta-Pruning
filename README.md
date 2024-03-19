@@ -18,3 +18,5 @@ References:
 
 - MIT OpenCourseWare Search: Games, Minimax, and Alpha-Beta https://www.youtube.com/watch?v=STjW3eH0Cik&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=7
 - Tic-Tac-Toe using Alpha-Beta Pruning: https://github.com/ianmparker/tic-tac-toe-AI-using-alpha-beta 
+![Uploading image.png…]()
+![rock paper scissors](https://github.com/ianmparker/Rock-Paper-Scissors-Alpha-Beta-Pruning/assets/18231849/11e4734f-a490-40fb-a5ae-ed030adada82)
