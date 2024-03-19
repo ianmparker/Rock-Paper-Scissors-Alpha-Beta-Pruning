@@ -4,9 +4,9 @@ This repo has two pyton files:
   - Human-vs-Ai-Rock-paper-Scissors
   - Ai-vs-Ai-Rock-Paper-Scissors
     
-Human-vs-Ai-Rock-paper-Scissors allows you to play against the Ai using your terminal. Simply make your choice by typing rock, paper, or scissors. 
+- Human-vs-Ai-Rock-paper-Scissors allows you to play against the Ai using your terminal. Simply make your choice by typing rock, paper, or scissors. 
 
-Ai-vs-Ai-Rock-Paper-Scissors simulated a game of Rock-Paper-Scissors bewteen a Maximizing player and a Minimizing player. 
+- Ai-vs-Ai-Rock-Paper-Scissors simulated a game of Rock-Paper-Scissors bewteen a Maximizing player and a Minimizing player. 
 
 Both of these examples use Minimaxing and Alpha beta Pruining to make decisions. 
 
